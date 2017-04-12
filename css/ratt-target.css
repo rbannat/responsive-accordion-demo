@@ -1,0 +1,91 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.rb-accordion {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+    padding: 15px;
+    font-size: 0;
+}
+
+.rb-accordion li {
+    display: inline-block;
+    margin-right: 1px;
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+.rb-accordion li:last-child {
+    margin-right: 0;
+}
+
+.rb-accordion li a {
+    display: block;
+    padding: 10px 15px;
+    background: #dbdbdb;
+    text-decoration: none;
+    font-weight: bold;
+    color: #4B5056;
+}
+
+.rb-accordion__content {
+    position: absolute;
+    left: 0;
+    height: 0;
+    padding: 0 15px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.rb-accordion :target a {
+    background: #fff;
+}
+
+.rb-accordion :target .rb-accordion__content {
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    .rb-accordion a {
+        width: 100%;
+    }
+
+    .rb-accordion__content {
+        position: static;
+        float: left;
+        margin: 0;
+    }
+
+    .rb-accordion li {
+        display: block;
+        overflow: hidden;
+        margin: 0 0 1px 0;
+    }
+}

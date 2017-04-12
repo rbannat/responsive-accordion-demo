@@ -1,0 +1,99 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.rb-accordion {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+    padding: 15px;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rb-accordion label {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    display: block;
+    padding: 10px 15px;
+    margin-right: 1px;
+    cursor: pointer;
+    color: #4B5056;
+    background: #dbdbdb;
+    font-weight: bold;
+    color: #4B5056;
+}
+
+.rb-accordion .rb-accordion__content {
+    -webkit-box-ordinal-group: 99;
+    -webkit-order: 99;
+    -ms-flex-order: 99;
+    order: 99;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 0 15px;
+}
+
+.rb-accordion input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.rb-accordion input[type="radio"]:checked + label {
+    background: #fff;
+}
+
+.rb-accordion input[type="radio"]:checked + label + .rb-accordion__content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .rb-accordion .rb-accordion__content, .rb-accordion label {
+        -webkit-box-ordinal-group: initial;
+        -webkit-order: initial;
+        -ms-flex-order: initial;
+        order: initial;
+    }
+
+    .rb-accordion label {
+        width: 100%;
+        margin: 0 0 1px 0;
+    }
+}
